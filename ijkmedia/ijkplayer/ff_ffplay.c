@@ -5252,10 +5252,10 @@ int ffp_record_file(FFPlayer *ffp, AVPacket *packet)
                         pkt->duration = 0;
                     }
                      // 写入一个AVPacket到输出文件,如果遇到报错的帧，那么直接跳过ret赋值0，跳过该帧
-                        if ((ret = av_interleaved_write_frame(ffp->m_ofmt_ctx, pkt))< 0) {
-                            av_log(ffp, AV_LOG_ERROR, "Error muxing packet %d",ret);
-                            ret = 0;
-                        }
+                    if ((ret = av_interleaved_write_frame(ffp->m_ofmt_ctx, pkt))< 0) {
+                        av_log(ffp, AV_LOG_ERROR, "Error muxing packet %d",ret);
+                        ret = 0;
+                    }
                     av_packet_unref(pkt);
                     pthread_mutex_unlock(&ffp->record_mutex);
                 } else {
