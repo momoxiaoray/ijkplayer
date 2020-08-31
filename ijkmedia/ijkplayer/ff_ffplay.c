@@ -5238,7 +5238,6 @@ int ffp_record_file(FFPlayer *ffp, AVPacket *packet)
                             printf("AVMEDIA_TYPE_AUDIO: %lld pkt->pts: %lld pkt->dts: %lld pkt->stream_index:%d pkt->duration:%lld\n",ffp->start_a_pts,pkt->pts,pkt->dts,pkt->stream_index,pkt->duration);
                         }
                     }
-
                     in_stream  = is->ic->streams[pkt->stream_index];
                     out_stream = ffp->m_ofmt_ctx->streams[pkt->stream_index];
                     // 将packet中的各时间值从输入流封装格式时间基转换到输出流封装格式时间基,跟下面方法一样
