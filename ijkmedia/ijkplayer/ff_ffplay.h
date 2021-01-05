@@ -122,7 +122,7 @@ int       ffp_start_record(FFPlayer *ffp, const char *file_name);
 int       ffp_stop_record(FFPlayer *ffp);
 int       ffp_record_file(FFPlayer *ffp, AVPacket *packet);
 void      ffp_get_current_frame_l(FFPlayer *ffp, uint8_t *frame_buf);
-
+int       ffp_prestop_l(FFPlayer *ffp);
 
 AVStream			*m_vStream;
 #endif

@@ -834,3 +834,4 @@ int ijkmp_stop_record(IjkMediaPlayer *mp)
     return retval;
 }
 
+
