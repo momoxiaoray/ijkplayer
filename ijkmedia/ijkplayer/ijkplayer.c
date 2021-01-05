@@ -513,7 +513,6 @@ int ijkmp_pause(IjkMediaPlayer *mp)
 static int ijkmp_stop_l(IjkMediaPlayer *mp)
 {
     assert(mp);
-
     MPST_RET_IF_EQ(mp->mp_state, MP_STATE_IDLE);
     MPST_RET_IF_EQ(mp->mp_state, MP_STATE_INITIALIZED);
     // MPST_RET_IF_EQ(mp->mp_state, MP_STATE_ASYNC_PREPARING);
